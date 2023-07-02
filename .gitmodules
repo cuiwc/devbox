@@ -1,0 +1,4 @@
+[submodule "astronvim-user"]
+	path = astronvim-user
+	url = git@github.com:cuiwc/astronvim-user
+	branch = v3
