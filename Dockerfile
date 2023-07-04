@@ -31,7 +31,8 @@ USER $USERNAME
 # Post-install configurations, in the user context.
 #
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended; \
-    sed -ie "s/robbyrussell/$ZSH_THEME/g" /home/$USERNAME/.zshrc
+    sed -ie "s/robbyrussell/$ZSH_THEME/g" /home/$USERNAME/.zshrc; \
+    sed -ie "s/plugins=(git/plugins=(/g" /home/$USERNAME/.zshrc
 
 RUN sudo add-apt-repository ppa:neovim-ppa/unstable; \
     sudo apt-get update ; \
